@@ -14,7 +14,7 @@ const Dashboard: React.FC<DashboardProps> = async ({ searchParams }) => {
       <div className="bg-gray-700 w-2/5 rounded-xl mb-5 max-h-28">
         <DashboardInput />
       </div>
-      <DashboardContent nfts={NFTs} />
+      {NFTs && <DashboardContent nfts={NFTs} />}
     </div>
   );
 };

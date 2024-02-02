@@ -1,6 +1,8 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 
+import { NFT } from "@/types";
+
 const GetNftsByTitle = async (title: string) => {
   const supabase = createServerComponentClient({
     cookies: cookies,
@@ -15,7 +17,7 @@ const GetNftsByTitle = async (title: string) => {
   if (error) {
     console.log(error);
   } else {
-    return data || [];
+    return (data as NFT[]) || [];
   }
 };
 
