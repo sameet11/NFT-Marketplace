@@ -1,4 +1,3 @@
-import GetNftsByBenefit from "@/actions/getnftbyproperty";
 import GetNftsByTitle from "@/actions/getnftbytitle";
 import DashboardContent from "@/components/DashboardContent";
 import DashboardInput from "@/components/DashboardInput";
